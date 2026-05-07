@@ -1,2 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  /* Sets the default font for the entire app */
+  --font-sans: "Bellefair", ui-sans-serif, system-ui;
+  
+  /* Creates a new utility: class="font-display" */
+  --font-display: "Barlow", sans-serif;
+  
+  /* Creates another: class="font-custom" */
+  --font-custom: "Barlow-Condensed", serif;
+}
