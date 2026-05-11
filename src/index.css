@@ -1,3 +1,5 @@
+
+
 @import "tailwindcss";
 
 @theme {
@@ -9,4 +11,5 @@
   
   /* Creates another: class="font-custom" */
   --font-custom: "Barlow-Condensed", serif;
+ 
 }

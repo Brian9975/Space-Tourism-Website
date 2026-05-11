@@ -1,16 +1,16 @@
 
 import { Link, useNavigate } from "react-router-dom"
-import bgHomeDesk from "../../assets/home/background-home-desktop.jpg"
-import bgHomeMobile from "../../assets/home/background-home-mobile.jpg"
-import bgHomeTablet from "../../assets/home/background-home-tablet.jpg"
-import Logo from "../../assets/shared/logo.svg"
+import bgHomeDesk from "/assets/home/background-home-desktop.jpg"
+import bgHomeMobile from "/assets/home/background-home-mobile.jpg"
+import bgHomeTablet from "/assets/home/background-home-tablet.jpg"
+import Logo from "/assets/shared/logo.svg"
 
 export default function Home() {
 
 
  const navigate = useNavigate()
   return (
-    <div className='bg-cover sm:bg-[image:var(--bg-tablet)] md:bg-[image:var(--bg-desktop)] bg-[image:var(--bg-mobile)] text-white bg-center min-h-screen' 
+    <div className='bg-cover sm:bg-(image:--bg-tablet) md:bg-(image:--bg-desktop) bg-(image:--bg-mobile) text-white bg-center min-h-screen' 
     style={{  '--bg-desktop': `url(${bgHomeDesk})`, '--bg-mobile': `url(${bgHomeMobile})`, '--bg-tablet': `url(${bgHomeTablet})`,} as React.CSSProperties}>
       <div className="flex  pt-10 items-center justify-between">
         <div className="pl-10">
@@ -22,7 +22,7 @@ export default function Home() {
             <div><p className="opacity-0">Lorem ipsum dolor sit amet.</p></div>
             <div className="border-t border-white/30 w-80"><p className="opacity-0">Lorem ipsum dolor sit amet.</p></div>
           </div>
-          <nav className="text-sm font-display flex items-center gap-12 py-9 px-20 bg-white/10">
+          <nav className="text-sm font-display flex items-center md:gap-12 md:py-8 md:px-30 bg-white/10">
             <div>
             <Link to={"/"}><span className="pr-2 font-bold">00</span>HOME</Link>
             </div>
@@ -40,17 +40,17 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <main className="flex py-35 justify-around items-center">
+      <main className="md:flex grid place-items-center  py-35 md:justify-around md:items-center">
         <div>
-          <p className="font-display tracking-wide text-lg">SO, YOU WANT TO TRAVEL TO</p>
-          <p className="text-9xl pt-3 pb-9 font-custom">SPACE</p>
-          <p className="text-sm tracking-wide font-display">Let’s face it; if you want to go to space, you might as well<br/> genuinely go to outer space and not hover kind of on the<br/> edge of it. Well sit back, and relax because we’ll give you<br/> a truly out of this world experience!</p>
+          <p className="font-display md:text-left text-center tracking-wide text-lg">SO, YOU WANT TO TRAVEL TO</p>
+          <p className="text-9xl pt-3 pb-9 text-center md:text-left font-custom">SPACE</p>
+          <p className="md:text-sm text-center md:text-left text-lg  leading-10 tracking-wide font-display">Let’s face it; if you want to go to space, you might as well<br/> genuinely go to outer space and not hover kind of on the<br/> edge of it. Well sit back, and relax because we’ll give you<br/> a truly out of this world experience!</p>
         </div>
 
 
 
            <div>
-        <button onClick={() => navigate("/destination")} className="h-45 hover:ring-white/10 hover:ring-100  transition-all cursor-pointer w-45 text-blue-950 text-lg rounded-full bg-white">
+        <button onClick={() => navigate("/destination")} className="md:h-45 mt-30 h-60 w-60  hover:ring-white/10 hover:ring-100  transition-all cursor-pointer md:w-45 text-blue-950 text-lg rounded-full bg-white">
           EXPLORE
         </button>
         </div>
