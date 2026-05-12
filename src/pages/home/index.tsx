@@ -44,7 +44,7 @@ export default function Home() {
         <div>
           <p className="font-display md:text-left text-center tracking-wide text-lg">SO, YOU WANT TO TRAVEL TO</p>
           <p className="text-9xl pt-3 pb-9 text-center md:text-left font-custom">SPACE</p>
-          <p className="md:text-sm text-center md:text-left text-lg  leading-10 tracking-wide font-display">Let’s face it; if you want to go to space, you might as well<br/> genuinely go to outer space and not hover kind of on the<br/> edge of it. Well sit back, and relax because we’ll give you<br/> a truly out of this world experience!</p>
+          <p className="md:text-sm text-center md:text-left text-lg tracking-wide font-display">Let’s face it; if you want to go to space, you might as well<br/> genuinely go to outer space and not hover kind of on the<br/> edge of it. Well sit back, and relax because we’ll give you<br/> a truly out of this world experience!</p>
         </div>
 
 
