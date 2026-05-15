@@ -25,7 +25,7 @@ export default function Crew() {
    }, 500)
   }
   return (
-    <div  className="min-h-screen  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
+    <div  className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
           style={
             {
               "--bg-mobile": `url(${bgCrew1})`,
@@ -86,7 +86,7 @@ export default function Crew() {
               <h2 className="uppercase text-white/50 font-custom text-2xl">
                 {currentPerson?.role}
               </h2>
-              <h1 className="uppercase mt-3 font-custom text-5xl">
+              <h1 className="uppercase mt-3 font-custom text-[44px]">
                 {currentPerson?.name}
               </h1>
               <p className="w-93 mt-5 font-display text-sm">
@@ -101,8 +101,9 @@ export default function Crew() {
 }
               </div>
             </div>
-            <div className={`w-110 transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"}`}>
+            <div className={`w-110 transition-all relative duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-100"}`}>
               <img className="max-w-full" src={currentPerson?.images.png} alt="" />
+              <div className="absolute bg-linear-to-t  from-[#0B0D17] to-transparent via-transparent  bottom-0 top-60 left-0 right-0"></div>
             </div>
           </main>
 

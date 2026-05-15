@@ -108,7 +108,7 @@ export default function Destination() {
           ))}
          </div>
 
-         <div className={`transition-all duration-500 ease-in-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10" }`}>
+         <div className={`transition-all duration-500 ease-in-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-100" }`}>
         <h1 className="text-8xl text-center md:text-left py-5 font-custom">{currentDestination?.name}</h1>
         <p className="w-89 text-sm text-center md:text-left pb-8 font-display">{currentDestination?.description}</p>
  
