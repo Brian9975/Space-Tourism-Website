@@ -84,7 +84,7 @@ export default function Technology() {
                       {/* Tabs */}
                      <div className="font-custom md:ml-30 flex md:flex-col gap-6">{
                       techData.map(t => (
-                         <button onClick={() => handleSmoothTransition(t.name)} key={t.name} className="h-16 cursor-pointer hover:bg-white hover:text-[#0B0D17] transition-all w-16 rounded-full border-2 border-white/20 flex justify-center items-center text-2xl"><div>{t.id}</div></button>
+                         <button onClick={() => handleSmoothTransition(t.name)} key={t.name} className={`h-16 ${activeTab === t.name ? "bg-white text-[#0B0D17]" : "bg-transparent"} cursor-pointer hover:bg-white  hover:text-[#0B0D17] transition-all w-16 rounded-full border-2 border-white/20 flex justify-center items-center text-2xl`}><div>{t.id}</div></button>
                       ))
                        
                      }
