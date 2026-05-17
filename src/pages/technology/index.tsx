@@ -1,8 +1,6 @@
-import bgTech3 from "/assets/technology/background-technology-desktop.jpg"
-import bgTech1 from "/assets/technology/background-technology-mobile.jpg"
-import bgTech2 from "/assets/technology/background-technology-tablet.jpg"
+
+
 import { Link } from "react-router-dom"
-import Logo from "/assets/shared/logo.svg"
 import data from "../../data.json"
 import { useState } from "react"
 
@@ -28,15 +26,15 @@ export default function Technology() {
     <div  className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
           style={
             {
-              "--bg-mobile": `url(${bgTech1})`,
-              "--bg-tablet": `url(${bgTech2})`,
-              "--bg-desk": `url(${bgTech3})`,
+              "--bg-mobile": `url(/assets/technology/background-technology-mobile.jpg)`,
+              "--bg-tablet": `url(/assets/technology/background-technology-tablet.jpg)`,
+              "--bg-desk": `url(/assets/technology/background-technology-desktop.jpg)`,
             } as React.CSSProperties
           }>
        <div className="flex  md:pt-10 items-center justify-between">
                <div className="md:pl-10">
                  <Link to={"/"}>
-                   <img className="w-10" src={Logo} />
+                   <img className="w-10" src="/assets/shared/logo.svg" />
                  </Link>
                </div>
                

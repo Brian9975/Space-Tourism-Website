@@ -1,7 +1,7 @@
 import { useState } from "react"
-import bgCrew1 from "/assets/crew/background-crew-mobile.jpg"
-import bgCrew2 from "/assets/crew/background-crew-tablet.jpg"
-import bgCrew3 from "/assets/crew/background-crew-desktop.jpg"
+
+
+
 import { Link } from "react-router-dom"
 import Logo from "/assets/shared/logo.svg"
 import data from "../../data.json"
@@ -28,9 +28,9 @@ export default function Crew() {
     <div  className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
           style={
             {
-              "--bg-mobile": `url(${bgCrew1})`,
-              "--bg-tablet": `url(${bgCrew2})`,
-              "--bg-desk": `url(${bgCrew3})`,
+              "--bg-mobile": `url(/assets/crew/background-crew-mobile.jpg)`,
+              "--bg-tablet": `url(/assets/crew/background-crew-tablet.jpg)`,
+              "--bg-desk": `url(/assets/crew/background-crew-desktop.jpg)`,
             } as React.CSSProperties
           }>
           <div className="flex  md:pt-10 items-center justify-between">
@@ -53,7 +53,7 @@ export default function Crew() {
                      <p className="opacity-0">Lorem ipsum dolor sit amet.</p>
                    </div>
                  </div>
-                 <nav className="text-sm font-display flex items-center md:gap-12 md:py-8 md:px-30 bg-white/10">
+                 <nav className="text-sm font-display flex items-center md:gap-12 md:py-8 md:px-30 backdrop-blur-md  bg-white/5">
                    <div>
                      <Link to={"/"}>
                        <span className="pr-2 font-bold">00</span>HOME

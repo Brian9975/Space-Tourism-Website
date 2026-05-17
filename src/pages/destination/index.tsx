@@ -1,9 +1,8 @@
 import {useState} from "react";
-import bgDestination1 from "/assets/destination/background-destination-mobile.jpg";
-import bgDestination2 from "/assets/destination/background-destination-tablet.jpg";
-import bgDestination3 from "/assets/destination/background-destination-desktop.jpg";
+
+
 import data from "../../data.json";
-import Logo from "/assets/shared/logo.svg";
+
 import { Link } from "react-router-dom";
 
 
@@ -41,16 +40,16 @@ export default function Destination() {
       className="min-h-screen  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
       style={
         {
-          "--bg-mobile": `url(${bgDestination1})`,
-          "--bg-tablet": `url(${bgDestination2})`,
-          "--bg-desk": `url(${bgDestination3})`,
+          "--bg-mobile": `url(/assets/destination/background-destination-mobile.jpg)`,
+          "--bg-tablet": `url(/assets/destination/background-destination-tablet.jpg)`,
+          "--bg-desk": `url(/assets/destination/background-destination-desktop.jpg)`,
         } as React.CSSProperties
       }
     >
       <div className="flex  md:pt-10 items-center justify-between">
         <div className="md:pl-10">
           <Link to={"/"}>
-            <img className="w-10" src={Logo} />
+            <img className="w-10" src="/assets/shared/logo.svg" />
           </Link>
         </div>
         

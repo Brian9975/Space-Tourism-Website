@@ -1,9 +1,8 @@
 
 import { Link, useNavigate } from "react-router-dom"
-import bgHomeDesk from "/assets/home/background-home-desktop.jpg"
-import bgHomeMobile from "/assets/home/background-home-mobile.jpg"
-import bgHomeTablet from "/assets/home/background-home-tablet.jpg"
-import Logo from "/assets/shared/logo.svg"
+
+
+
 
 export default function Home() {
 
@@ -11,10 +10,10 @@ export default function Home() {
  const navigate = useNavigate()
   return (
     <div className='bg-cover sm:bg-(image:--bg-tablet) md:bg-(image:--bg-desktop) bg-(image:--bg-mobile) text-white bg-center min-h-screen' 
-    style={{  '--bg-desktop': `url(${bgHomeDesk})`, '--bg-mobile': `url(${bgHomeMobile})`, '--bg-tablet': `url(${bgHomeTablet})`,} as React.CSSProperties}>
+    style={{  '--bg-desktop': `url(/assets/home/background-home-desktop.jpg)`, '--bg-mobile': `url(/assets/home/background-home-mobile.jpg)`, '--bg-tablet': `url(/assets/home/background-home-tablet.jpg)`,} as React.CSSProperties}>
       <div className="flex  pt-10 items-center justify-between">
         <div className="pl-10">
-           <Link to={"/"}><img className="w-10" src={Logo}/></Link>
+           <Link to={"/"}><img className="w-10" src="/assets/shared/logo.svg"/></Link>
         </div>
 
         <div className="flex">
