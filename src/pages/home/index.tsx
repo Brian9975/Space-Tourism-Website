@@ -85,7 +85,7 @@ const links = [
 
 
            <div>
-        <button onClick={() => navigate("/destination")} className="md:h-45 mt-35 mb-35 md:h-60 md:w-60 h-40 w-40 hover:ring-white/10 hover:ring-100  transition-all cursor-pointer md:w-45 text-blue-950 hover:text-blue-950/70 text-lg rounded-full bg-white">
+        <button onClick={() => navigate("/destination")} className="md:h-45 mt-35 mb-35 h-40 w-40 hover:ring-white/10 hover:ring-100  transition-all cursor-pointer md:w-45 text-blue-950 hover:text-blue-950/70 text-lg rounded-full bg-white">
           EXPLORE
         </button>
         </div>

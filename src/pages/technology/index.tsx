@@ -185,8 +185,9 @@ export default function Technology() {
 
         {/* Technology Image */}
         <div
-          className={`md:ml-10  transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-100"}`}
+          className={`md:ml-10`}
         >
+          <div className={` transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-100"}`}>
           <img
             className="md:w-110 hidden md:flex"
             src={currentTab?.images.portrait}
@@ -197,6 +198,7 @@ export default function Technology() {
             src={currentTab?.images.landscape}
             alt={currentTab?.name}
           />
+          </div>
           {/* Tabs */}
           <div className="font-custom mb-13 mt-10 md:hidden justify-center md:justify-start flex md:ml-30  md:flex-col gap-6">
             {techData.map((t) => (
