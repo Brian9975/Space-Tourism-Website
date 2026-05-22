@@ -38,8 +38,8 @@ export default function Technology() {
         } as React.CSSProperties
       }
     >
-      <div className="flex md:pt-10 p-7 sm:p-0 items-center justify-between">
-        <div className="md:pl-10">
+     <div className="flex md:pt-10 p-7 sm:p-0 items-center justify-between">
+        <div className="md:pl-10 sm:px-5">
           <Link to={"/"}>
             <img className="w-10" src="/assets/shared/logo.svg" />
           </Link>
@@ -70,11 +70,11 @@ export default function Technology() {
               <p className="opacity-0">Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
-          <nav className="text-sm font-display  flex  items-center md:gap-12  md:px-30 bg-white/10">
+          <nav className="text-sm md:text-sm sm:text-xs font-display backdrop-blur-md tracking-widest flex  items-center sm:gap-7  md:gap-12 sm:px-15  md:px-30 bg-white/10">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `uppercase py-8 ${isActive ? "border-b-3 border-white" : "border-b-3 border-transparent"}`
+                `uppercase duration-500 hover:border-white/50 transition-all py-8 ${isActive ? "border-b-3 border-white" : "border-b-3 border-transparent"}`
               }
             >
               <span className="pr-2 font-bold">00</span>Home
@@ -83,7 +83,7 @@ export default function Technology() {
               <div key={link.number}>
                 <NavLink
                   className={({ isActive }) =>
-                    `uppercase py-8 ${isActive ? "border-b-3 border-white" : "border-b-3 border-transparent"}`
+                    `hover:border-white/50 duration-500 transition-all py-8 ${isActive ? "border-b-3 border-white" : "border-b-3 border-transparent"}`
                   }
                   to={link.path}
                 >
@@ -147,8 +147,8 @@ export default function Technology() {
         </aside>
       }
 
-      <h3 className="font-display text-center md:text-left mx-10 md:my-10 mb-25 mt-8 text-lg tracking-wider md:mt-15 md:ml-27">
-        <span className="pr-2 text-white/50 font-bold tracking-widest">03</span>
+      <h3 className="font-display text-center sm:text-left mx-10 md:my-10 mb-25 mt-8 text-lg tracking-wider md:mt-15 md:ml-27">
+        <span className="pr-4 text-white/50 font-bold tracking-widest">03</span>
         SPACE LAUNCH 101
       </h3>
 
@@ -159,7 +159,7 @@ export default function Technology() {
             <button
               onClick={() => handleSmoothTransition(t.name)}
               key={t.name}
-              className={`h-16 ${activeTab === t.name ? "bg-white text-[#0B0D17]" : "bg-transparent"} cursor-pointer hover:bg-white  hover:text-[#0B0D17] transition-all w-16 rounded-full border-2 border-white/20 flex justify-center items-center text-2xl`}
+              className={`h-16 ${activeTab === t.name ? "bg-white text-[#0B0D17]" : "bg-transparent"} cursor-pointer hover:border-white/85  transition-all w-16 rounded-full border-2 duration-500 border-white/20 flex justify-center items-center text-2xl`}
             >
               <div>{t.id}</div>
             </button>
@@ -177,7 +177,7 @@ export default function Technology() {
             <h1 className="font-custom uppercase py-3 md:p-0 text-3xl sm:text-[44px]">
               {currentTab?.name}
             </h1>
-            <p className="font-display md:text-sm text-white/85 w-85">
+            <p className="font-display sm:text-sm sm:w-110 leading-7 md:w-85 text-white/85  w-85">
               {currentTab?.description}
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function Technology() {
             alt={currentTab?.name}
           />
           <img
-            className="md:w-110 md:hidden h-75"
+            className="md:w-110 md:hidden sm:h-90 h-75"
             src={currentTab?.images.landscape}
             alt={currentTab?.name}
           />
@@ -205,7 +205,7 @@ export default function Technology() {
               <button
                 onClick={() => handleSmoothTransition(t.name)}
                 key={t.name}
-                className={`md:h-16 h-12 w-12 ${activeTab === t.name ? "bg-white text-[#0B0D17]" : "bg-transparent"} cursor-pointer hover:bg-white  hover:text-[#0B0D17] transition-all md:w-16 rounded-full border-2 border-white/20 flex justify-center items-center text-2xl`}
+                className={`md:h-16 duration-500 h-12 w-12 ${activeTab === t.name ? "bg-white text-[#0B0D17]" : "bg-transparent"} cursor-pointer hover:border-white/85  transition-all md:w-16 rounded-full border-2 border-white/20 flex justify-center items-center text-2xl`}
               >
                 <div>{t.id}</div>
               </button>
