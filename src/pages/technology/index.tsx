@@ -2,6 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import data from "../../data.json";
 import { useState } from "react";
 import { X, TextAlignJustify } from "lucide-react";
+import AnimateOnNavigate from "../../components/Layout/AnimateOnNavigate";
 
 export default function Technology() {
   const [sideOpen, setSideOpen] = useState(false);
@@ -29,8 +30,8 @@ export default function Technology() {
   };
   return (
     <div
-      className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
-      style={
+    className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
+    style={
         {
           "--bg-mobile": `url(/assets/technology/background-technology-mobile.jpg)`,
           "--bg-tablet": `url(/assets/technology/background-technology-tablet.jpg)`,
@@ -147,6 +148,7 @@ export default function Technology() {
         </aside>
       }
 
+        <AnimateOnNavigate>
       <h3 className="font-display text-center sm:text-left mx-10 md:my-10 mb-25 mt-8 text-lg tracking-wider md:mt-15 md:ml-27">
         <span className="pr-4 text-white/50 font-bold tracking-widest">03</span>
         SPACE LAUNCH 101
@@ -213,6 +215,8 @@ export default function Technology() {
           </div>
         </div>
       </main>
+    </AnimateOnNavigate>
     </div>
+
   );
 }

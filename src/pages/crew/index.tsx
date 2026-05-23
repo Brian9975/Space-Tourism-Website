@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import data from "../../data.json";
 import { TextAlignJustify, X } from "lucide-react";
+import AnimateOnNavigate from "../../components/Layout/AnimateOnNavigate";
 
 export default function Crew() {
   const [sideOpen, setSideOpen] = useState(false);
@@ -30,8 +31,8 @@ export default function Crew() {
   };
   return (
     <div
-      className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
-      style={
+    className="min-h-screen pb-20  text-white md:bg-(image:--bg-desk) bg-cover bg-center bg-(image:--bg-mobile) sm:bg-(image:--bg-tablet)"
+    style={
         {
           "--bg-mobile": `url(/assets/crew/background-crew-mobile.jpg)`,
           "--bg-tablet": `url(/assets/crew/background-crew-tablet.jpg)`,
@@ -148,6 +149,7 @@ export default function Crew() {
         </aside>
       }
 
+          <AnimateOnNavigate>
       <h3 className="font-display text-center sm:text-left mx-10 my-10 text-lg tracking-wider md:mt-15 md:ml-27">
         <span className="pr-4 text-white/50 font-bold tracking-widest">02</span>
         MEET YOUR CREW
@@ -187,6 +189,8 @@ export default function Crew() {
           <div className="absolute bg-linear-to-t  from-[#0B0D17] to-transparent via-transparent  bottom-0 top-60 left-0 right-0"></div>
         </div>
       </main>
+    </AnimateOnNavigate>
     </div>
+
   );
 }
