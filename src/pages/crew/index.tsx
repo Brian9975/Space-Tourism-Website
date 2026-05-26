@@ -35,7 +35,7 @@ export default function Crew() {
     >
 
           <AnimateOnNavigate>
-      <h3 className="font-display text-center sm:text-left mx-10 my-10 text-lg tracking-wider md:mt-15 md:ml-27">
+      <h3 className="font-display text-center sm:text-left mx-10 pt-30 pb-10 text-lg tracking-wider md:pt-55 md:ml-27">
         <span className="pr-4 text-white/50 font-bold tracking-widest">02</span>
         MEET YOUR CREW
       </h3>

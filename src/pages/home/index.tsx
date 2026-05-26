@@ -18,7 +18,7 @@ export default function Home() {
      
       <AnimateOnNavigate>
         {/* Hero */}
-        <main className="md:flex grid place-items-center  md:py-35 sm:pt-30 py-10 md:justify-around md:items-center">
+        <main className="md:flex grid place-items-center  md:py-35 sm:pt-30 py-30 md:justify-around md:items-center">
           <div>
             <p className="font-display md:text-left text-center tracking-wide text-md sm:text-xl md:text-lg">
               SO, YOU WANT TO TRAVEL TO

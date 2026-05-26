@@ -13,8 +13,8 @@ export default function Layout() {
   ];
   return (
     <div className="text-white">
-       <div className="flex md:pt-10 p-7 sm:p-0 items-center top-0 right-0 left-0 fixed justify-between">
-        <div className="md:pl-10 sm:px-5">
+       <div className="flex justify-between z-50 md:pt-10 p-7 sm:p-0 items-center top-0 right-0 left-0  fixed ">
+        <div className="md:pl-10 shrink-0 sm:px-5">
           <Link to={"/"}>
             <img className="w-10" src="/assets/shared/logo.svg" />
           </Link>
@@ -31,11 +31,11 @@ export default function Layout() {
             />
           </div>
         }
-
+         <div className="h-px hidden md:block bg-white/30 z-50 flex-1"/>
         <div className="hidden  sm:flex">
-          <div
+          {/* <div
             className={
-              "w-60 z-50 hidden  md:flex flex-col items-center justify-center"
+              "w-60 z-40 hidden  md:flex flex-col items-center justify-center"
             }
           >
             <div>
@@ -44,8 +44,9 @@ export default function Layout() {
             <div className="border-t border-white/30 w-80">
               <p className="opacity-0">Lorem ipsum dolor sit amet.</p>
             </div>
-          </div>
-          <nav className="text-sm md:text-sm sm:text-xs font-display backdrop-blur-md tracking-widest flex  items-center sm:gap-7  md:gap-12 sm:px-15  md:px-30 bg-white/10">
+          </div> */}
+          
+          <nav className="text-sm shrink-0 md:text-sm sm:text-xs font-display backdrop-blur-md tracking-widest flex  items-center sm:gap-7  md:gap-12 sm:px-15  md:px-30 bg-white/10">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -93,6 +94,7 @@ export default function Layout() {
             <div>
               <div className="flex ml-7 max-w-64">
                 <NavLink
+                onClick={() => setSideOpen(false)}
                   to="/"
                   className={({ isActive }) =>
                     `my-3  hover:border-white/50 uppercase w-full  ${isActive ? "border-r-4  border-white" : "border-r-4 border-transparent"}`
@@ -107,6 +109,7 @@ export default function Layout() {
                   className="flex ml-7 flex-col space-y-10 max-w-64"
                 >
                   <NavLink
+                    onClick={() => setSideOpen(false)}
                     className={({ isActive }) =>
                       `uppercase hover:border-white/50 w-full my-3   ${isActive ? "border-r-4 border-white" : "border-r-4 border-transparent"}`
                     }

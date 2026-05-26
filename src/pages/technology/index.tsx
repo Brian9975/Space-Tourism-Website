@@ -10,7 +10,7 @@ export default function Technology() {
   const techData = data.technology;
   const [activeTab, setActiveTab] = useState(techData[0].name);
   const [isVisible, setIsVisible] = useState(true);
-  console.log(techData);
+
 
   const currentTab = techData.find((t) => t.name === activeTab);
 
@@ -36,7 +36,7 @@ export default function Technology() {
     >
       
       <AnimateOnNavigate>
-        <h3 className="font-display text-center sm:text-left mx-10 md:my-10 mb-25 mt-8 text-lg tracking-wider md:mt-15 md:ml-27">
+        <h3 className="font-display text-center sm:text-left pt-30 pb-10 mx-10  text-lg tracking-wider md:pt-55 md:ml-27">
           <span className="pr-4 text-white/50 font-bold tracking-widest">
             03
           </span>
