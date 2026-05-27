@@ -1,75 +1,67 @@
-# React + TypeScript + Vite
+# Space Tourism Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My solution to the [Frontend Mentor Space Tourism challenge](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-Currently, two official plugins are available:
+[Live Site](https://space-tourism-website-eta-ten.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React + Vite
+- Tailwind CSS
+- React Router v6
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+public/
+└── assets/
+├── destination/
+├── crew/
+├── technology/
+└── shared/
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+src/
+├── components/
+│   ├── Layout.jsx        # Shared navbar + outlet for all pages
+│   ├── Navbar.jsx        # Active link state, glassmorphism, logo line
+│   └── PageTransition.jsx
+├── pages/
+│   ├── home/
+│   ├── destination/
+│   ├── crew/
+│   └── technology/
+└── data.json
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Images sit in `public/assets` so they can be referenced directly from `data.json` using root-relative paths like `/assets/destination/image-moon.png` — no imports needed.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Tab switching with fade animation on Destination, Crew and Technology pages
+- All content rendered dynamically from `data.json` — nothing hardcoded
+- Navbar persists across all pages using a shared Layout and React Router's `<Outlet />`
+- Active page indicated by a border on the nav link using `NavLink` and `isActive`
+- Glassmorphism navbar with `backdrop-blur`
+- Crew image fades into the background using a gradient overlay
+- Mobile sidebar slides in from the right
+
+---
+
+## Run locally
+
+```bash
+git clone https://github.com/Brian9975/space-tourism-website.git
+cd space-tourism-website
+npm install
+npm run dev
+
+
+## Acknowledgements
+
+- Challenge design by [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
+- Built and coded by [Brian Kariuki](https://brian-kariuki.vercel.app)
