@@ -28,7 +28,7 @@ export default function Destination() {
     }, 500);
   };
   const currentDestination = destinationData.find((d) => d.name === activeTab);
-  console.log(currentDestination?.images.png);
+ 
   const Image = currentDestination?.images.png;
   return (
     <div
@@ -63,6 +63,7 @@ export default function Destination() {
             <div className="flex gap-7 justify-center md:justify-start  font-display">
               {destinationData.map((d) => (
                 <button
+                key={d.name}
                   onClick={() => {
                     setTimeout(() => {
                       setActiveTab(d.name);
