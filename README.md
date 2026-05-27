@@ -60,8 +60,11 @@ cd space-tourism-website
 npm install
 npm run dev
 
+```
+
+---
 
 ## Acknowledgements
 
 - Challenge design by [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
-- Built and coded by [Brian Kariuki](https://brian-kariuki.vercel.app)
+- Built by [Brian Kariuki](https://brian-kariuki.vercel.app)
