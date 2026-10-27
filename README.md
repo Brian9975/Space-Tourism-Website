@@ -1,70 +1,68 @@
+<img width="1365" height="767" alt="Screenshot 2026-10-27 17 22 53" src="https://github.com/user-attachments/assets/44fed0c1-f431-493f-aa3d-69ad69348a40" />
+
+
 # Space Tourism Website
 
-My solution to the [Frontend Mentor Space Tourism challenge](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
+A responsive, interactive space tourism website built with React, TypeScript, and Tailwind CSS as part of a Frontend Mentor challenge.
 
-[Live Site](https://space-tourism-website-eta-ten.vercel.app/)
+The project was created to test my ability to accurately replicate a provided UI design while implementing responsive layouts, interactive components, and smooth navigation.
 
----
+## Live Demo
 
-## Stack
-
-- React + Vite
-- Tailwind CSS
-- React Router v6
-
----
-
-## Structure
-
-public/
-└── assets/
-├── destination/
-├── crew/
-├── technology/
-└── shared/
-
-src/
-├── components/
-│   ├── Layout.jsx        # Shared navbar + outlet for all pages
-│   ├── Navbar.jsx        # Active link state, glassmorphism, logo line
-│   └── PageTransition.jsx
-├── pages/
-│   ├── home/
-│   ├── destination/
-│   ├── crew/
-│   └── technology/
-└── data.json
-
-
-Images sit in `public/assets` so they can be referenced directly from `data.json` using root-relative paths like `/assets/destination/image-moon.png` — no imports needed.
-
----
+https://space-tourism-website-eta-ten.vercel.app/
 
 ## Features
 
-- Tab switching with fade animation on Destination, Crew and Technology pages
-- All content rendered dynamically from `data.json` — nothing hardcoded
-- Navbar persists across all pages using a shared Layout and React Router's `<Outlet />`
-- Active page indicated by a border on the nav link using `NavLink` and `isActive`
-- Glassmorphism navbar with `backdrop-blur`
-- Crew image fades into the background using a gradient overlay
-- Mobile sidebar slides in from the right
+- **Responsive Design:** Optimized for mobile phones, tablets, and desktop screens.
+- **Multi-Page Navigation:** Uses React Router DOM to navigate between different pages.
+- **Interactive Tabs:** Allows users to explore different space tourism content.
+- **Smooth Transitions:** Provides fluid transitions between interactive elements.
+- **Hover Effects:** Enhances the user experience with visual feedback.
+- **Design Replication:** Recreates the UI provided in the Frontend Mentor Space Tourism challenge.
 
----
+## Tech Stack
 
-## Run locally
+- React
+- TypeScript
+- Tailwind CSS
+- React Router DOM
+
+## Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Brian9975/space-tourism-website.git
-cd space-tourism-website
-npm install
-npm run dev
-
+git clone https://github.com/Brian9975/Space-Tourism-Website.git
 ```
 
----
+### 2. Navigate to the Project Directory
 
-## Acknowledgements
+```bash
+cd Space-Tourism-Website
+```
 
-- Challenge design by [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
-- Built by [Brian Kariuki](https://brian-kariuki.vercel.app)
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+No environment variables or API keys are required.
+
+## Challenge
+
+This project is based on the Space Tourism Website challenge by [Frontend Mentor](https://www.frontendmentor.io/).
+
+## Author
+
+**Brian Kariuki**
+
+GitHub: https://github.com/Brian9975
